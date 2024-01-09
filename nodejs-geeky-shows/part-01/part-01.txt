@@ -1,0 +1,24 @@
+# WHAT IS NODE.JS
+
+    i. Node.js is a javascript runtime environment built on Chorm's V8 javascript engine.
+    ii. Node.js allows you to run javascript on the server.
+    iii. Node.js also provides library of various javascript modules which helps to develop web applications.
+    iv. Node.js was developed by Ryan Dahl in 2009.
+    v. Node.js is not a language or a framework.
+
+
+# ADVANTAGES OF NODE.JS
+
+    i. Open source.
+    ii. Efficient, fast and highly scalable.
+    iii. Event driven
+    iv. Very popular
+
+
+# PREREQUISITE
+
+    i. javascript
+    ii. npm
+
+
+
