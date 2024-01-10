@@ -1,0 +1,7 @@
+# CREATE NODE.JS PROJECT =>
+
+    npm init
+
+# CREATE NODE.JS PROJECT WITH AUTO OPTIONS =>
+
+    npm init -y

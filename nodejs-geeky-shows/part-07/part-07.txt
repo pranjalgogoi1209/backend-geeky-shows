@@ -1,0 +1,17 @@
+# REPL =>
+
+    The repl module provides a Read-Eval-Print-Loop(REPL) implementation that is available both as a standalone program or includible in other applications.
+
+
+# SOME COMMANDS =>
+
+    i. .break: Sometimes you get stuck, this gets you out.
+    ii. .clear: Alias for .break.
+    iii. .editor: Enter editor mode (Ctrl+D to finish, Ctrl+C to cancel).
+    iv. .exit: Exit the REPL.
+    v. .help: Print this help message.
+    vi. .load: Load JS from a file into the REPL session e.g. .load ./file/to/load.js
+    vii. .save: Save all evaluated commands in this REPL session to a file e.g. .save ./file/to/save.js
+
+    Press Ctrl+C to abort current expression, Ctrl+D to exit the REPL
+    
