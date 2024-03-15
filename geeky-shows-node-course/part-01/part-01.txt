@@ -11,14 +11,11 @@
 
     i. Open source.
     ii. Efficient, fast and highly scalable.
-    iii. Event driven
-    iv. Very popular
+    iii. Event driven.
+    iv. Very popular.
 
 
 # PREREQUISITE
 
-    i. javascript
-    ii. npm
-
-
-
+    i. javascript.
+    ii. npm.

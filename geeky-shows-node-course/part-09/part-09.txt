@@ -1,0 +1,24 @@
+# MODULE WRAPPER
+
+Before a module's code is executed, Node.js will wrap it with a function wrapper that looks like the following:
+
+function(exports, require, module, __filename, __dirname){
+    //module code actually lives in here
+}
+
+By doing this, Node.js achieves a few things:
+
+* It keeps top-level variables (defined with var, const or let) scoped to the module rather than the global object.
+* It helps to provide some global looking variables that are actually specific to the module, such as:
+    * The module and exports objects that the implementor can use to export values from the module.
+    * The convenience variables __filename and __dirname, containing the module's absolute filename and directory path.
+
+# MODULE WRAPPER
+
+i. exports : A reference to the module.exports that that is shorter to type.
+ii. require: Used to import modules.
+iii. module: A reference to the current module.
+iv. __dirname: The directory name of the current module. This is the same as the path.dirname() of the      __filename.      
+           eg: console.log(__dirname).
+v. __filename: The file name of the current module. This is the current module file's absolute path with symlinks resolved.
+    eg: console.log(__filename).
