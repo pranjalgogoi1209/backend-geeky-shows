@@ -1,0 +1,88 @@
+File System :
+
+The fs module enables interacting with the file system in a way modeled on standard POSIX functions.
+
+* Promise Based API
+    * const fs = require("fs/promises")
+    * import * as fs from "fs/promises"
+
+* Callback API 
+    * const fs = require("fs");
+    * import * as fs from "fs";
+
+* Sync API 
+    * const fs = require("fs");
+    * import * as fs from "fs";
+
+
+# PROMISE API =>
+
+The fs/promises API provides asynchronous file system methods that return promises.
+
+mkdir() => Asynchronously creates a directory.
+Syntax => mkdir(path, options)
+
+readdir() => Reads the contents of a directory.
+Systax => readdir(path, options)
+
+rmdir() => Removes the directory identified by path.
+Syntax => rmdir(path, options)
+
+writeFile() => Asynchronously writes data to a file, replacing the file if it already exists.
+
+readFile() => Asynchronously reads the entire contents of a file.
+Syntax => readFile(path, options)
+
+appendFile(path, data, options) => Asynchronously append data to a file, creating the file if ti does not yet exist.
+Syntax => appendFile(path, data, options)
+
+copyFile() => Asynchronously copies src to dest. By default, dest is overwritten if it already exists.
+Syntax => copyFile(src, dest, model)
+
+stat() => Used to get file information.
+Syntax => stat(path, options)
+
+
+#CALLBACK API =>
+
+The callback APIs perform all operations Asynchronously, without blocking the event loop, then invoke a callback function upon completion or error.
+
+mkdir() => Asynchronously creates a directory
+syntax => mkdir(path, options, callback)
+
+readdir() => Reads the contents of a directory
+syntax => readdir(path, options, callback)
+
+rmdir() => Removes the directory identified by path.
+syntax => rmdir(path, options, callback)
+
+writeFile() => Asynchronously writes data to a file, replacing the file if it already exists.
+syntax => writeFile(file, data, options, callback)
+
+readFile() => Asynchronously reads the entire contents of a file.
+syntax => readFile(path, options, callback)
+
+appendFile(path, data, options) => Asynchronously append data to a file, creating the file if it does not yet exist.
+syntax => appendFile(path, data, options, callback)
+
+copyFile() => Asynchronously copies src to dest. By default, dest is overwritten if it already exists.
+syntax => copyFile(path, data, options, callback)
+
+stat() => Used to get file information.
+syntax => stat(path, options, callback)
+
+# SYNCHRONOUS API =>
+The synchronous APIS perform all operations synchronously, blocking the event loop until the operation completes or fails.
+
+mkdirSync() => synchronously creates a directory.
+syntax => mkdirSync(path, options)
+
+readdirSync() => Reads the contents of a directory.
+syntax => readdirSync(path, options)
+
+rmdirSync() => Removes the directory identified by path.
+syntax => rmdirSync(path, options)
+
+writeFileSync() => synchronously writes data to a file, replacing the file if it already exists.
+syntax => writeFileSync(file, data, options)
+
