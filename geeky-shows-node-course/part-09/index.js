@@ -4,6 +4,8 @@ function(exports, require, module, __filename, __dirname){
     //module code actually lives in here
 } */
 
-console.log(__dirname);
-console.log(__filename);
+// console.log(__dirname);
+// console.log(__filename);
+
+// it is an object
 console.log(module);

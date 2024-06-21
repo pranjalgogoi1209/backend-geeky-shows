@@ -1,7 +1,24 @@
 // path module
 const path = require("path");
 
-console.log();
+// console.log(path);
+
+/* 
+basename
+dirname
+extname
+join
+normalize
+parse
+isAbsolute
+resolve
+relative
+toNamespacedPath
+format
+sep
+delimiter
+win32 
+*/
 
 // basename
 console.log(
@@ -10,17 +27,24 @@ console.log(
     ".js"
   )
 );
+console.log(__filename);
+console.log(__dirname);
+console.log(path.basename(__filename));
 console.log(path.basename(__filename, ".js"));
+
+// extname
 console.log(path.basename(__filename, path.extname(__filename)));
 
 // dirname
-console.log(path.dirname(__filename));
+console.log("dirname =>", path.dirname(__filename));
 
 // extname
 console.log(path.extname(__filename));
 
 // join
 console.log(path.join("search", "label", "course", "oop"));
+
+// ".." means 1 directory back
 console.log(path.join("search", "label", "course", "oop", ".."));
 console.log(path.join("search", "label", "course", "oop", "..", ".."));
 console.log(path.join(__dirname, "course", "oop"));
@@ -28,7 +52,9 @@ console.log(path.join(__dirname, "course", "oop"));
 // normalize
 console.log(path.normalize("c:\\temp\\/\\foo\\bar"));
 console.log(path.normalize("c:\\temp\\/\\foo\\bar\\..\\"));
+console.log(path.win32.normalize("c://\temp\\/foo"));
 
+// parse => it returns object
 console.log(path.parse(__filename));
 console.log(path.parse(__filename).base);
 
