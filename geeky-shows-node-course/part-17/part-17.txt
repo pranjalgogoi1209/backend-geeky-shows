@@ -1,0 +1,5 @@
+install nodemon in global =>
+npm install -g nodemon
+
+install nodemon in only 1 project =>
+npm install --save-dev nodemon
