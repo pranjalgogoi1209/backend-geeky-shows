@@ -1,0 +1,8 @@
+HTTP => 
+
+The HTTP interfaces in Node.js are designed to support many features of the protocol which have been traditionally difficult to use.
+
+const http = require("http");
+import http from "http";
+
+createServer(options, requestListener) => Returns a new instance of http server.
