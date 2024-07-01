@@ -1,0 +1,12 @@
+DNS =>
+
+The dns (Domain name system) module enables name resolution. For example, use it to look up IP addresses of host names.
+
+import dns from "dns";
+
+lookup() => It resolves a host name (eg: "geekyshows.com) into the first found A (IPv4) or AAAA (IPv6) record. lookup() does not necessarily have anything to do with the DNS protocol. The implementation uses an operating system facility that can associate names with addresses, and vice versa.
+
+resolve() => It uses the DNS protocol to resolve a host name (eg: "geekyshows.com") into an array of the resource records. The callback function has arguments (err, records). When successful, records will be an array of resource records.
+
+Syntax:=> resolve(hostname, rrtype, callback)
+
