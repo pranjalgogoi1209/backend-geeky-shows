@@ -1,0 +1,8 @@
+# IMPORT AND EXPORT MODULE IN COMMON JS
+
+
+module import =>
+
+    package.json => type : "module"
+
+    `
