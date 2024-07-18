@@ -61,3 +61,76 @@ Document => A document is a set of key-value pairs. The documents in a single co
 
 mongosh => the mongoDB shell. mongosh, is a fully functional javascript and node.js 14.x REPL environment for interacting with MongoDB deployments. You can use the mongodb shell to test queries and operations directly with your datase.
 
+
+
+# MONGOSH
+
+i. Show all datases =>
+    show dbs
+
+ii. Create database and to switch =>
+    use database_name
+
+iii. delete database =>
+    db.dropDatabase()
+
+iv. clear =>
+    cls
+
+v. create collection =>
+    db.student.insertOne({
+        "name": "Pranjal",
+        "age" : 24
+    })
+
+vi. Create collection with validation =>
+    db.createCollection(
+        "teacher", {
+            validator:{
+                $jsonSchema: {
+                    bsonType: "object", 
+                    required: ["name", "age"], 
+                    properties: {
+                        name: {
+                            bsonType: "string", 
+                            description: "Must be a string and is required"
+                            },
+
+                        age: {
+                            bsonType: "int",
+                            description: "Must be an integer and is required"
+                            }
+                    }
+                }
+            }
+        }
+        )
+
+vii. For show all collections inside a database =>
+    show Collections
+
+viii. To get collection data =>
+    db.getCollectionInfos({name: "student"})
+
+ix. To delete collection =>
+    db.student.drop()
+
+x. Retrieve collection data =>
+    db.student.find()
+
+xi. To insert one document in collection =>
+    db.student.insertOne({
+        name: "Pranjal", 
+        age: 25
+    })
+
+xii. To insert many document in collection => 
+    db.student.insertMany([
+        {
+            name: "Upama Bora"
+        }, 
+        {
+            name: "Pranjal Gogoi"
+            age: 24
+        }
+    ])
