@@ -1,0 +1,82 @@
+# Authorization and Role
+
+* Create User =>
+    db.createUser(
+        {
+            user: "pranjal", 
+            pwd: "12345", 
+            roles: [
+                {
+                    role: "read", 
+                    db: "schooldb"
+                },
+                {
+                    role: "readWrite", 
+                    db: "schooldb"
+                },
+                ]}
+        )
+
+* Enable Authorization =>
+    Open mongod conf file then write.
+    security:
+        authorization: enabled
+
+* Authenticate User =>
+    mongosh --port 27017 --authenticationDatabase "schooldb" -u "pranjal"  -p "12345"
+
+* Built in Roles =>
+    read => It provides the ability to read data on all non-system collections and the system.js collection.
+
+    readWrite => It provides all the privileges of the read role plus ability to modify data on all non-system collections and the system.js collection.
+
+    dbAdmin => It provides the ability to perform administrative tasks such as schema related tasks, indexing, and gathering statistics. This role does not grant privileges for user and role management.
+
+    dbOwner => The database owner can perform any administrative action on the database. This role combines the privileges granted by  the readWrite, dbAdmin and userAdmin roles.
+
+    userAdmin => Provides the ability to create and modify roles and users on the current database. Since the userAdmin role allows users to grant any privilege to any user, including themselves, the role also indirectly provides superuser access to either the database or, if scoped to the admin database, the cluster.
+
+    readAnyDatabase => Provides the same read-only privileges as read on all databases.
+
+    readWriteAnyDatabase => Provides the same privileges as readWrite on all databases.
+
+    userAdminAnyDatabase => Provides the same access to user administration operations as userAdmin on all databases.
+
+    dbAdminAnyDatabase => Provides the same privileges as dbAdmin on all databases.
+
+    root => Provides access to the operations and all the resources.
+
+    * To check users of any db =>
+        show users
+
+    * To check all the roles =>
+        show roles
+
+    1. First create user
+    2. go to mongod config file and change these in line no. 24 =>
+        security: 
+            authorization: enabled
+    3. Restart server =>
+        go to services of your system, then restart mongodb server
+
+    Now I cann't find the collections inside any db
+
+    4. exit from that mongosh and this time start mongosh with authentication
+
+    5. Now I can read the data of only that database for which I create user.
+
+* To create super user: it can only be created inside admin db =>
+    1. First disable authentication.
+        i. Go to mongod config file and comment security.
+        ii. Restart server
+    2. create super user =>
+        db.createUser({
+            user: "boss",
+            pwd: "12345", 
+            roles: ["root"]
+        })
+
+    Now if securty is on, still superUser can access.
+
+* Delete user if you are super user => 
+    db.dropUser("pranjal")

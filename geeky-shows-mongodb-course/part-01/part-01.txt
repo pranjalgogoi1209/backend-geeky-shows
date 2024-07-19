@@ -72,6 +72,8 @@ ii. Create database and to switch =>
     use database_name
 
 iii. delete database =>
+    1st go inside that database =>
+        use db_name
     db.dropDatabase()
 
 iv. clear =>
@@ -134,3 +136,44 @@ xii. To insert many document in collection =>
             age: 24
         }
     ])
+
+xiii. To Retrieve  data preety =>
+    db.student.find().pretty()
+
+xiv. To Retrieve only one data =>
+    db.student.findOne()
+
+xv. To Retrieve data in a limit =>
+    db.teacher.find().limit(2)
+
+xvi. To Retrieve data according to the field =>
+    db.employee.find({age: 24})
+
+xvii. Update single data =>
+    db.employee.updateOne(
+        {
+            name: "Upama"
+        }, 
+        {
+            $set: {age: 24}
+        })
+
+xviii. Update multiple data =>
+    db.employee.updateMany({
+        age: 24, {
+            $set: {
+                name: "Sameer"
+            }
+        }
+    })
+
+xviii. Delete single document =>
+    db.employee.deleteOne({name: "Krishna"})
+
+xix. Delete many document =>
+    db.employee.deleteMany({
+        age: 24
+    })
+
+xx. To quit mongosh =>
+    quit
