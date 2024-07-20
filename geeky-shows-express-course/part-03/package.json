@@ -1,0 +1,19 @@
+{
+  "name": "part-03",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel index.js -w --out-dir prd",
+    "dev-serve": "nodemon prd/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@babel/cli": "^7.24.8",
+    "@babel/core": "^7.24.9",
+    "@babel/preset-env": "^7.24.8",
+    "express": "^5.0.0-beta.3"
+  }
+}

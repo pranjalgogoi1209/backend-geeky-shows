@@ -1,0 +1,73 @@
+# Babel =>
+Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of JavaScript in current and older browsers or environments. Here are the main thing Babel can do for you:
+
+* Transform syntax
+* Polyfill features that are missing in your target environment (e.g. `Array.prototype.includes`)
+* Source code transformations
+
+
+@babel/core => This is the main package to run any babel setup or configuration.
+
+@babel/cli => Babel comes with a built-in CLI which can be used to compile files from the command line.
+
+@babel/preset-env => This enables us to use new and upcoming features which node.js is yet to understand. New features are always new and will probably take time to implement in Node.js by default.
+
+npm install @babel/core @babel/cli @babel/preset-env
+
+# BABEL CLI =>
+
+Compile files: 
+
+* npx babel index.js => it compiles index.js file.
+
+* npx babel index.js --out-file index-compiled.js => it compiles index.js file and output to a file index-compiled.js. We can use --out-file or -o
+
+* npx babel index.js --watch --out-file index-compiled.js => It compiles index.js every time we make changes and output to a file index-compiled.js. We can use --watch or -w
+
+Compile directory:
+
+* npx babel src --out-dir prd => It compiles the entire src directory and output it to the prd directory by using either --out-dir or -d. This doesn't overwrite any other files or directories in lib.
+
+* npx babel src --out-file index-compiled.js => It compiles the entire src directory and output it as a single concatenated file.
+
+# SETUP BABEL =>
+
+* install All required babel packages =>
+    npm install @babel/core @bable/cli @babel/preset-env
+
+* Create a file called .babelrc at the root directory of project
+{ "presets": ["@babel/preset-env"] }   //"@babel/env"
+
+* Open package.json file
+"scripts": {
+    "build": "babel index.js --out-file prd",
+    "start": "npm run build && nodemon prd/index.js",
+    "serve": "node prd/index.js"
+    }
+
+* Open package.json file 
+"scripts": {
+    "build": "babel src --out-dir prd",
+    "start": "npm run build && nodemon prd/index.js",
+    "serve": "node prd/index.js"
+}
+
+Install babel =>
+ npm i @babel/cli @babel/preset-env @babel/core 
+
+
+# this is for production =>
+
+"scripts": {
+    "build": "babel index.js --out-dir prd",
+    "start": "npm run build && nodemon prd/index.js",
+    "serve": "node prd/index.js"
+},
+
+
+# This is for development =>
+
+"scripts": {
+    "start": "babel index.js -w --out-dir prd",
+    "dev-serve": "nodemon prd/index.js",
+},
