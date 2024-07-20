@@ -1,0 +1,10 @@
+# Introduction to Express JS
+
+Express js if fast, unopinionated, minimalist web framework for Node.js.
+
+* Create static, dynamic and hybrid web app.
+* Fast and easy.
+* Routing.
+* Middleware.
+* Rest api.
+* Very popular.

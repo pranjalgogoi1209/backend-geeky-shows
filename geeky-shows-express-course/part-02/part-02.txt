@@ -1,0 +1,12 @@
+# Requirement for installing Express js
+
+* Node js
+* npm
+
+# Installing & Uninstalling Express js
+
+* To install latest version =>
+    npm install express
+* To install particular version =>
+    npm i express@5.0.0-beta.3
+
