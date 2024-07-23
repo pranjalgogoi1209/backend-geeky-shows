@@ -1,0 +1,106 @@
+# WHY DO WE NEED ROUTER
+
+
+// MESSY CODE
+// ALL STUDENTS ROUTES
+app.get("/student/all", (req, res) => {
+  res.send("All students");
+});
+app.post("/student/create", (req, res) => {
+  res.send("New student created");
+});
+app.put("/student/update", (req, res) => {
+  res.send("Student updated");
+});
+// ALL TEACHERS ROUTES
+app.get("/teacher/all", (req, res) => {
+  res.send("All teachers");
+});
+app.post("/teacher/create", (req, res) => {
+  res.send("New teacher created");
+});
+app.put("/teacher/update", (req, res) => {
+  res.send("Teacher updated");
+}); 
+
+SO THAT OUR CODE DON'T BECOME MESSY, WE USE ROUTER.
+
+# ROUTER =>
+
+* Router class is used to create modular, mountable route handlers.
+* A Router instance is a complete middleware and routing system.
+* Every express application has a built-in app router.
+
+Steps:-
+* Create Router Module => routes/students.js
+* Create Router instance => 
+    const router = express.Router()
+* Define router using router object
+    router.get("/", (req, res) => {
+        res.send("Hello World");
+    })
+* Export router 
+    module.exports = route
+* Create/Open app.js
+* Import Router Module
+    const student = require("./student.js")
+* Load Router Module =>
+    app.use("/vidyarthi", student)
+
+**
+First module =>
+
+routes/students.js
+
+const router = express.Router()
+
+// ALL STUDENTS ROUTES
+router.get("/all", (req, res) => {
+  res.send("All students");
+});
+router.post("/create", (req, res) => {
+  res.send("New student created");
+});
+router.put("/update", (req, res) => {
+  res.send("Student updated");
+});
+
+module.exports = router
+
+
+**
+Second module =>
+
+routes/teachers.js
+
+const router = express.Router()
+
+// ALL TEACHERS ROUTES
+router.get("/all", (req, res) => {
+  res.send("All teachers");
+});
+router.post("/create", (req, res) => {
+  res.send("New teacher created");
+});
+router.put("/update", (req, res) => {
+  res.send("Teacher updated");
+}); 
+
+module.exports = router
+
+
+app.js file =>
+
+const student = require(".students.js")
+const teacher = require(".teachers.js")
+
+app.use("/student", student)
+app.use("/teacher", teacher)
+
+
+# APP.USE =>
+
+    app.use([path], [callback1, callback2, ...], callback) => It mounts the specified middleware function or functions at the specified path: the middleware function is executed when the base of the erquested path matches path.
+
+    A router is valid middleware.
+    An Express app is valid middleware.

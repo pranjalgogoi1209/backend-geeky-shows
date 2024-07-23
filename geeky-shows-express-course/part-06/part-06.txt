@@ -141,3 +141,33 @@ app.get("/cbexample4", [cb1, cb2], (req, res, next) => {
     console.log("Fourth callback")
     res.send("Combination of Independent function and array of functions")
 })
+
+# CHAINED ROUTE CALLBACK =>
+app.route(path) => It returns an instance of a single route, which you can then use to handle HTTP verbs with optional middleware. Use app.route() to avoid duplicate route names.
+
+app.route("/student")
+.get((req, res) => {
+    res.send("All student => get request")
+})
+.post((req, res) => {
+    res.send("Add new student => post request")
+})
+.put((req, res) => {
+    res.send("Complete update => put request")
+})
+
+# To add validation in all cases =>
+
+app.route("/student")
+.all((req, res) => {
+    // runs for all HTTP verbs first
+})
+.get((req, res) => {
+    res.send("All student => get request")
+})
+.post((req, res) => {
+    res.send("Add new student => post request")
+})
+.put((req, res) => {
+    res.send("Complete update => put request")
+})
