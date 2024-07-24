@@ -44,6 +44,11 @@ app.get("/train/:from.:to", (req, res) => {
   res.send(`from-${from} , to-${to}`);
 });
 
+// with regx
+app.get("/teacher/delete/:id([0-9]{2})", (req, res) => {
+  res.send(`teacher deleted ${req.params.id}`);
+});
+
 app.listen(port, () => {
   console.log(`http://localhost:${port}`);
 });
