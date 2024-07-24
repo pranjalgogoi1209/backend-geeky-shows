@@ -1,0 +1,41 @@
+# ROUTE PARAMETER =>
+
+Route parameters are named URL segments that are used to capture the values specified at their position in the URL.
+
+The captured values are populated in the req.params object, with the name of the route parameter specified in the path as their respective keys.
+
+The name of route parameters must be made up of "word characters" ([A-Za-z0-9]).
+
+Eg:-
+/student/:id    
+//www.example.com/student/12
+
+/product/:category/:id  
+//www.example.com/product/mobile/23
+
+/product/order/:year/and/:month
+//www.example.com/train/ranchi-dhanbad
+
+/train/:from-:to
+//www.example.com/train/ranchi-dhanbad
+
+/location/:state.:city
+//www.example.com/location/jh.ranchi
+
+req.params = {
+    "state": "jh", 
+    "city": "ranchi",
+}
+
+# ROUTE PARAMETER WITH REGX =>
+To have more control over the exact string that can be matched by a route parameter, you can append a regular experssion in parentheses (()).
+
+eg:-
+/student/:id([0-9]{2})
+//www.example.com/student/12
+
+/product/order/:year/and/:month([a-z])
+//www.example.com/product/order/2018/and/feb
+
+test route tool =>
+http://forbeslindesay.github/express-route-tester/
