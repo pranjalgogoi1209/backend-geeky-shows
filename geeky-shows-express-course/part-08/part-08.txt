@@ -38,4 +38,23 @@ eg:-
 //www.example.com/product/order/2018/and/feb
 
 test route tool =>
-http://forbeslindesay.github/express-route-tester/
+http://forbeslindesay.github.io/express-route-tester/
+
+# app.param() => The app.param() function is used to add the callback triggers to route parameters. It is comonly used to check for the existence of the data requested related to the route parameter.
+All param callbacks will be called before any handler of any route in which the param occurs, and they will each be called only once in a request-response cycle, even if the parameter is matched in multiple routes.
+
+syntax:-
+
+app.param(name, callback)
+app.param([name1, name2], callback)
+
+If name is an array, the callback trigger is registered for each parameter declared in it, in the order in which they are declared.
+
+# QUERY string
+/product 
+//www.example.com/product?category=mobile
+req.query = {"category": "mobile"}
+
+/product
+//www.example.com/product?category=mobile&id=13
+req.query = {"category": "mobile", "id": 13}
