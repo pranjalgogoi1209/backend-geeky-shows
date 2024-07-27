@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <!-- <link rel="stylesheet" href="/css/styles.css" /> -->
+
+    <!-- for virtual path -->
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <link rel="stylesheet" href="/static/.hello.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to My Homepage</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="hero">
+        <h2>Hero Section</h2>
+        <p>This is the hero section of the homepage.</p>
+        <button id="learnMoreBtn">Learn More</button>
+      </section>
+      <section id="content">
+        <h2>Main Content</h2>
+        <p>This is the main content area.</p>
+        <div class="gallery">
+          <!-- <img src="images/fruits-01.jpeg" alt="Image 1" />
+            <img src="images/fruits-02.jpg" alt="Image 2" /> -->
+
+          <!-- for virtual path -->
+          <img src="/static/images/fruits-01.jpeg" alt="Image 1" />
+          <img src="/static/images/fruits-02.jpg" alt="Image 2" />
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 My Website</p>
+    </footer>
+    <!-- <script src="js/scripts.js"></script> -->
+
+    <!-- for virtual path -->
+    <script src="/static/js/scripts.js"></script>
+  </body>
+</html>
