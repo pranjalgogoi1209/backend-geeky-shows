@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>EJS TEMPLATE ENGINE</h1>
+    <p>
+      <!-- displaying variable data -->
+      <%= name %>
+
+      <!-- creating variable -->
+      <% var i = 10; %>
+
+      <!-- displaying created variable data -->
+      <%= i %>
+    </p>
+
+    <!-- comment -->
+    <%# Comment will not be present in the rendered HTML %>
+
+    <!-- if -->
+    <br />
+    ------------------ if ------------------
+    <br />
+    <!-- <% if (i === 10) { console.log('i is 10'); console.log("testing only"); %> i
+    is 10 => <%= name %> <% } %> -->
+
+    <% if(name){ %>
+    <script>
+      console.log("working");
+    </script>
+    This is html content.
+    <br />
+    I am <%= name %> <% } %>
+
+    <!-- else if -->
+    <br /><br />
+    ------------------ if-else ------------------
+    <br />
+    <% if(name === "Krishna Yadav"){ %>
+    <script>
+      console.log("working");
+    </script>
+    This is if block.
+    <br />
+    I am <%= name %> from if block <% } else{ %>
+    <script>
+      console.log("not working");
+    </script>
+    This is else block.
+    <br />
+    I am <%= name %> from else block <% } %>
+
+    <!-- else if -->
+    <br /><br />
+    ------------------ else if -------------------
+    <br />
+    <% if (name === "Krishna Yadav") { %>
+    <script>
+      console.log("this is if block");
+    </script>
+    This is if block.
+    <br />
+    I am <%= name %> from if block <% } else if (name === "Pranjal Gogoi") { %>
+    <script>
+      console.log("this is else if block");
+    </script>
+    This is else if block.
+    <br />
+    I am <%= name %> from else if block <% } else { %>
+    <script>
+      console.log("this is else block");
+    </script>
+    This is else block.
+    <br />
+    I am <%= name %> from else block <% } %>
+
+    <!-- for loop -->
+    <br /><br />
+    ------------------ for loop -------------------
+    <br />
+    <% for(var j=0; j<=4; j++){ %>
+    <script>
+      // console.log("loop is working", <%= j %>);
+    </script>
+    <%= j %> => <%= marks[j] %> <% } %>
+
+    <!-- for in loop -->
+    <br /><br />
+    ------------------ for in loop -------------------
+    <br />
+    <% for(const key in marks){ %> <%= marks[key]%> <% } %>
+
+    <!-- for of loop -->
+    <br /><br />
+    ------------------ for of loop -------------------
+    <br />
+    <% for(const mark of marks){ %> <%= mark %> <% } %>
+
+    <!-- while loop -->
+    <br /><br />
+    ------------------ while loop -------------------
+    <br />
+    <% let loopNumber = 0; while (loopNumber <= 4){ %> loopNumber is <%=
+    loopNumber %> mark is <%= marks[loopNumber]%> <% loopNumber++ %> <% } %>
+
+    <!-- foreach loop -->
+    <br /><br />
+    ------------------ foreach loop -------------------
+    <br />
+    <% marks.forEach((ele, idx) => { %> <%= ele %> <% }) %>
+
+    <!-- function calling -->
+    <br /><br />
+    ------------------ function calling -------------------
+    <br />
+    <% var result = sum(marks[0], marks[1]) %> The sum of <%= marks[0] %> and
+    <%= marks[1] %> is <%= result %> <% %>
+    <br />
+    <% var current = new Date(); %> Current date is <%= current %> <% %>
+  </body>
+</html>
