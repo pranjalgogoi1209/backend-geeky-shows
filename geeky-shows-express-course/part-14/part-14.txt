@@ -154,3 +154,182 @@ while (loopNumber <= 4){
         Current date is <%= current %>
     <%
 %>
+
+
+# INCLUDE TEMPLATE =>
+include => Include are relative to the template with the include call.
+Syntax =>
+<%- include(filename, object) %>
+<%- include(folder/filename, object) %>
+
+eg: =>
+<%- include("footer", {name: "Pranjal Gogoi"}) %>
+# EJS TEMPLATE ENGINE =>
+
+EJS (Embedded javascript) is a simple templating language that lets you generate HTML markup with plain JavaScript.
+
+* Fast compilation and rendering.
+* Simple template tags: <% %>
+* Cusom delimiters (eg:, use[??] instead of <% %>).
+* Sub template includes.
+* Ships with CLI.
+* Both server JS and browser support.
+* Static caching of intermediate Javascript.
+
+# DISPLAYING DATA => 
+You may display data that is passed to your views by wrapping the variable in <%= %>
+eg: <%= name %>
+
+# COMMENT => 
+EJS also allows you do define comments in your views. However, unlike HTML commnets, EJS comments are not included in the HTML returned by your application.
+eg: 
+<%# This comment will not be present in the rendered HTML %>
+
+# if =>
+If evaluates a variable, and if that variable is "true" (ie. exists. is not empty, and is not a false boolean value).
+
+Syntax:-
+<% if(variable) {%>
+    ....
+<%} %>
+
+eg:-
+<% if(name) {%>
+    <h1>Hello <%= name %></h1>
+<%} %>
+
+# CONDITIONAL =>
+
+* if =>
+
+<% 
+if(name){
+    %>
+        <script>console.log("working");</script>
+        This is html content.
+        <br/>
+        I am <%= name %>
+    <%
+}
+%>
+
+* if else =>
+<%
+if(name){
+    %>
+        <script>console.log("working");</script>
+        This is if block.
+        <br/>
+        I am <%= name %> from if block   
+    <%
+} else{
+    %>
+        <script>console.log("not working");</script>
+        This is else block.
+        <br/>
+        I am <%= name %> from else block
+    <%
+}
+%>
+
+* else if =>
+<% if (name === "Krishna Yadav") { %>
+  <script>console.log("this is if block");</script>
+  This is if block.
+  <br />
+  I am <%= name %> from if block
+<% } else if (name === "Pranjal Gogoi") { %>
+  <script>console.log("this is else if block");</script>
+  This is else if block.
+  <br />
+  I am <%= name %> from else if block
+<% } else { %>
+  <script>console.log("this is else block");</script>
+  This is else block.
+  <br />
+  I am <%= name %> from else block
+<% } %>
+
+# LOOP =>
+
+* for loop =>
+<% 
+    for(var j=0; j<=4; j++){
+        %>
+            <script>
+                // console.log("loop is working", <%= j %>);
+            </script>
+            <%= j %> => <%= marks[j] %>
+        <%
+    }
+%>
+
+* for in loop =>
+<% 
+    for(const key in marks){
+        %>
+            <%= marks[key]%>
+        <%
+    }
+%>
+
+* for of loop => 
+
+<% 
+    for(const mark of marks){
+        %>
+            <%= mark %>
+        <%
+    }
+%>
+
+* while loop =>
+
+<%
+let loopNumber = 0;
+while (loopNumber <= 4){
+    %>
+        loopNumber is <%= loopNumber %>
+        mark is <%= marks[loopNumber]%>
+        <% loopNumber++ %>
+    <%
+}
+%>
+
+* for each => 
+<% 
+    marks.forEach((ele, idx) => {
+        %>
+            <%= ele %>
+        <%
+    })
+%>
+
+* function calling =>
+
+<%  
+    var result = sum(marks[0], marks[1])
+    %>
+        The sum of <%= marks[0] %> and <%= marks[1] %> is <%= result %>
+    <%
+%>
+<br/>
+<%  
+    var current = new Date(); 
+    %>
+        Current date is <%= current %>
+    <%
+%>
+
+
+// day-20
+
+# INCLUDE TEMPLATE =>
+include => Include are relative to the template with the include call.
+Syntax =>
+<%- include(filename, object) %>
+<%- include(folder/filename, object) %>
+
+eg: =>
+<%- include("footer", {name: "Pranjal Gogoi"}) %>
+<%- include("myfolder/footer", {name: "Pranjal Gogoi"}) %>
