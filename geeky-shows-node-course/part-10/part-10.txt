@@ -1,2 +1,38 @@
 # PATH : The path module provides utilities for working with file and directory paths. It can be accessed using: const path = require("path");
 
+basename() => The basename() method returns the last portion of a path, similar to the Unix basename command. Trailing directory separators are ignored.
+syntax: basename(path, ext)
+eg: basename('/test/something.html', .html)
+
+dirname() => The dirname() method returns the directory name of a path, similar to the Unix dirname command. Trailing directory separators are ignored.
+syntax: dirname(path)
+eg: dirname('test/something.html')
+
+extname() => The extname() method returns the extension of the path, from the last occurrence of the (period) character to end of string in the last portion of the path. If there is no. in the last portion of the path, or if there are no characters other than the first character of the basename of path, an empty string is returned.
+Syntax: extname(path)
+eg: extname('index.html')
+
+join() => The join() method joins all given path segments together using the platform-specific separator as a delimiter, then normalizes the resulting path. zero-length path segments are ignored. If the joined path string is a zero-length string then "." will be returned, representing the current working directory.
+syntax: join(...paths)
+eg: join("/search", "label", "course/python", "oop", "..")
+
+normalize() => The normalize() method normalizes the given path, resolving ".." and "." segments. If the path is a zero-length string, "." is returned, representing the current working directory.
+syntax => normalize(path)
+eg =>
+normalize("C:\\temp\\\\foo\\bar\\..\\") 
+win32.normalize("C:///temp\\\/\\/\\/foo/bar")
+
+parse() => The parse() method returns an object whose properties represent significant elements of the path. Trailing directory separators are ignored. 
+syntax => parse(path)
+eg -> parse("C:\\path\\dir\\file.txt")
+
+isAbsolute() => The path .isAbsolute() method determines if path is an absolute path. If the given path is a zero length stirng, false will be returned.
+path.isAbsolute("//server"); //true
+path.isAbsolute("\\\\server"); //true
+path.isAbsolute("c:/foo/.."); //true
+path.isAbsolute("C:\\foo\\.."); //true
+path.isAbsolute("bar\\baz"); //false
+path.isAbsolute("bar/baz"); //false
+path.isAbsolute("."); //false
+
+

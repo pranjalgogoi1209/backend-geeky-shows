@@ -8,4 +8,4 @@ function(exports, require, module, __filename, __dirname){
 // console.log(__filename);
 
 // it is an object
-console.log(module);
+// console.log(module);

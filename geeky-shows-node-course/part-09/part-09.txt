@@ -15,7 +15,7 @@ By doing this, Node.js achieves a few things:
 
 # MODULE WRAPPER
 
-i. exports : A reference to the module.exports that that is shorter to type.
+i. exports : A reference to the module.exports that is shorter to type.
 ii. require: Used to import modules.
 iii. module: A reference to the current module.
 iv. __dirname: The directory name of the current module. This is the same as the path.dirname() of the      __filename.      
