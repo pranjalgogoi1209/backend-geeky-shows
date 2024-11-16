@@ -63,10 +63,10 @@ win32
 // console.log(path.parse(__filename).base);
 
 // isAbsolute
-console.log(path.isAbsolute("//server"));
+/* console.log(path.isAbsolute("//server"));
 console.log(path.isAbsolute("\\\\server"));
 console.log(path.isAbsolute("c:/foo/.."));
 console.log(path.isAbsolute("C:\\foo\\.."));
 console.log(path.isAbsolute("bar\\baz"));
 console.log(path.isAbsolute("bar/baz"));
-console.log(path.isAbsolute("."));
+console.log(path.isAbsolute(".")); */

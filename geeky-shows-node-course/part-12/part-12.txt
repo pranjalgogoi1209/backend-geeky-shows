@@ -6,7 +6,7 @@ The fs module enables interacting with the file system in a way modeled on stand
     * const fs = require("fs/promises")
     * import * as fs from "fs/promises"
 
-* Callback API 
+* Callback API or Asyn API
     * const fs = require("fs");
     * import * as fs from "fs";
 
@@ -43,7 +43,7 @@ stat() => Used to get file information.
 Syntax => stat(path, options)
 
 
-#CALLBACK API =>
+#CALLBACK API or Asyn API =>
 
 The callback APIs perform all operations Asynchronously, without blocking the event loop, then invoke a callback function upon completion or error.
 

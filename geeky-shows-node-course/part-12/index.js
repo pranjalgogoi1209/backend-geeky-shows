@@ -1,6 +1,5 @@
 // File system => PROMISE API
 
-import { stat } from "fs";
 import * as fs from "fs/promises";
 
 // creating directory - path sould be there
@@ -21,6 +20,7 @@ import * as fs from "fs/promises";
     "D:\\courses\\backend-courses\\backend-geeky-shows\\geeky-shows-node-course\\part-12\\test1\\directory",
     { recursive: true }
   );
+  console.log("directory created");
 } catch (error) {
   console.log(error);
 } */
@@ -40,15 +40,19 @@ import * as fs from "fs/promises";
 // REMOVE DIRECTORY => DIRECTORY SHOULD BE EMPTY
 /* try {
   await fs.rmdir(
-    "D:\\courses\\backend-courses\\backend-geeky-shows\\geeky-shows-node-course\\part-12\\test1\\directory"
+    "D:\\courses\\backend-courses\\backend-geeky-shows\\geeky-shows-node-course\\part-12\\test-again\\directory"
   );
+  console.log("directory is removed");
 } catch (error) {
   console.log(error);
 } */
 
 // CREATE AND WRITE FILE
 /* try {
-  await fs.writeFile("test1\\test.txt", "Hellow Pranjal Gogoi");
+  await fs.writeFile(
+    "test1\\test.txt",
+    "Hellow Pranjal Gogoi, trying again, new update"
+  );
 } catch (error) {
   console.log(error);
 } */
@@ -71,7 +75,7 @@ import * as fs from "fs/promises";
 
 // APPEND DATA INTO FILE
 /* try {
-  await fs.appendFile("test1\\test.txt", "Hellow Geeky shows");
+  await fs.appendFile("test1\\test.txt", ", data appended successfully");
 } catch (error) {
   console.log(error);
 } */
@@ -85,7 +89,7 @@ import * as fs from "fs/promises";
 
 // CREATE AND COPY FILE
 /* try {
-  await fs.copyFile("test1\\test.txt", "test1\\info.txt");
+  await fs.copyFile("test1\\test.txt", "test1\\info2.txt");
 } catch (error) {
   console.log(error);
 } */
@@ -106,7 +110,7 @@ import * as fs1 from "fs";
 
 // creating directory => path should be there
 /* fs1.mkdir(
-  "D:\\courses\\backend-courses\\backend-geeky-shows\\geeky-shows-node-course\\part-12\\test2",
+  "D:\\courses\\backend-courses\\backend-geeky-shows\\geeky-shows-node-course\\part-12\\test3",
   (error) => {
     if (error) throw error;
     console.log("directory created using callback api");
@@ -175,7 +179,7 @@ import * as fs1 from "fs";
 }); */
 
 // GET FILE INFORMATION
-/* fs1.stat("test1\\readme.txt", "test1\\readme2.txt", (error, stats) => {
+/* fs1.stat("test1\\readme.txt", (error, stats) => {
   if (error) throw error;
   console.log(stats);
   console.log(stats.isDirectory());
@@ -192,7 +196,7 @@ import * as fs3 from "fs";
 ); */
 
 // READ CONTENT OF DIRECTORY
-const files = fs3.readdirSync(
+/* const files = fs3.readdirSync(
   "D:\\courses\\backend-courses\\backend-geeky-shows\\geeky-shows-node-course\\part-12\\test1"
 );
 
@@ -200,3 +204,7 @@ console.log(files);
 for (const file of files) {
   console.log(file);
 }
+ */
+
+// write file
+/* fs3.writeFileSync("test//info.txt", "Hellow Pranjal Gogoi"); */
