@@ -41,7 +41,7 @@ Database => In mongoDB, databases hold one or more collections.
 
 Collection => MongoDB stores documents in collections. Collections are analogous to tables in relational databases.
 
-Document => A document is a set of key-value pairs. The documents in a single collection do not need to have the same set of fields and the data type for a field can differ across documents within a collection.
+Document => A document is a set of field-value pairs. The documents in a single collection do not need to have the same set of fields and the data type for a field can differ across documents within a collection.
 
 
 # MONGODB DEPLOYMENT OPTIONS 
@@ -59,14 +59,14 @@ Document => A document is a set of key-value pairs. The documents in a single co
 
 # mongos => for a sharded cluster, the mongos instances provide interface between the client applications and the sharded cluster. The mongos instances route queries and write operations to the shards. From the perspective of the application, a mongos instance behaves identically to any other MongoDB instance.
 
-mongosh => the mongoDB shell. mongosh, is a fully functional javascript and node.js 14.x REPL environment for interacting with MongoDB deployments. You can use the mongodb shell to test queries and operations directly with your datase.
+# mongosh => the mongoDB shell. mongosh, is a fully functional javascript and node.js 14.x REPL environment for interacting with MongoDB deployments. You can use the mongodb shell to test queries and operations directly with your datase.
 
 
 
 # MONGOSH
 
 i. Show all datases =>
-    show dbs
+    show dbs => we can't see empty database using show dbs
 
 ii. Create database and to switch =>
     use database_name
@@ -78,8 +78,8 @@ iii. delete database =>
 
 iv. clear =>
     cls
-
-v. create collection =>
+1
+ v. create collection =>
     db.student.insertOne({
         "name": "Pranjal",
         "age" : 24
@@ -120,7 +120,7 @@ ix. To delete collection =>
 x. Retrieve collection data =>
     db.student.find()
 
-xi. To insert one document in collection =>
+xi. To insert single document in collection =>
     db.student.insertOne({
         name: "Pranjal", 
         age: 25

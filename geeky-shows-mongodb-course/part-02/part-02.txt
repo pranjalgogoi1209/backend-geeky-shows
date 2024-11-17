@@ -52,16 +52,33 @@
     * To check all the roles =>
         show roles
 
-    1. First create user
+    1. First create user =>
+     db.createUser(
+        {
+            user: "pranjal", 
+            pwd: "12345", 
+            roles: [
+                {
+                    role: "read", 
+                    db: "schooldb"
+                },
+                {
+                    role: "readWrite", 
+                    db: "schooldb"
+                },
+                ]}
+        )
     2. go to mongod config file and change these in line no. 24 =>
         security: 
             authorization: enabled
     3. Restart server =>
+    windows+R and run services.msc
         go to services of your system, then restart mongodb server
 
     Now I cann't find the collections inside any db
 
     4. exit from that mongosh and this time start mongosh with authentication
+    mongosh --authenticationDatabase "pranjalDb" -u "pranjal" -p "12345"
 
     5. Now I can read the data of only that database for which I create user.
 

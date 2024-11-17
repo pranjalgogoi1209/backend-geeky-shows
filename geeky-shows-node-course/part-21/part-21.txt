@@ -1,8 +1,20 @@
 # IMPORT AND EXPORT MODULE IN COMMON JS
 
 
-module import =>
+common js module =>
+    "package.json" => type: "common js"
 
-    package.json => type : "module"
+es module =>
+    "package.json" => type : "module"
+    
 
-    `
+common js =>
+const {studentName, marks} = require("student")
+module.exports = { studentName, marks }
+
+es module =>
+import {marks, studentName} from "student.js"
+export {marks, studentName}
+
+import marks from "student.js"
+export default marks

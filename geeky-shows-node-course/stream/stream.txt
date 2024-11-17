@@ -1,0 +1,3 @@
+If we have a huge file like 50,000 lines of file, and we are sending it to frontend. 
+
+When many users will send request at the same time, file sending process will take more memory and server will get crash. so we have to use stream.

@@ -1,3 +1,5 @@
+// Questions => Without using recursive true, create a directory named "child" only if the parent directory named "parent" does exist.
+
 // fs module callback =>
 /* import * as fs from "fs";
 
