@@ -8,3 +8,14 @@ Express js if fast, unopinionated, minimalist web framework for Node.js.
 * Middleware.
 * Rest api.
 * Very popular.
+
+Prerequisite =>
+    * HTML
+    * CSS
+    * JavaScript
+    * NPM
+    * Node JS
+    * Bootstrap
+    * Tailwind CSS
+    * Axios
+    * Fetch API

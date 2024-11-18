@@ -3,10 +3,12 @@ import EventEmitter from "events";
 // const myEmitter = new EventEmitter();
 
 // creating class
-class MyEmitter extends EventEmitter {}
+// class MyEmitter extends EventEmitter {}
 
 // creating object
-const myEmitter = new MyEmitter();
+// const myEmitter = new MyEmitter();
+
+const myEmitter = new EventEmitter();
 
 // example 1
 // register event listener
