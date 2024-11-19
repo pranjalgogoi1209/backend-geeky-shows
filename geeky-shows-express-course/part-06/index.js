@@ -24,13 +24,15 @@ app.get("/ab?cd", (req, res) => {
   res.send("This is a path which contains a");
 }); */
 
+// for after api/ any path comes
 app.all("/api/*", (req, res) => {
   res.send("PAGE NOT FOUND in API");
 });
 
-app.all("*", (req, res) => {
+// for all paths
+/* app.all("*", (req, res) => {
   res.send("PAGE NOT FOUND");
-});
+}); */
 
 // one callback
 app.get("/cbexample1", (req, res) => {
@@ -88,7 +90,9 @@ app.get(
 app
   .route("/student")
   .all((req, res, next) => {
-    console.log("First run this for all http methods");
+    console.log(
+      "to add any restrictions or validations for all the methods, First run this for all http methods"
+    );
     next();
   })
   .get((req, res) => {
@@ -127,9 +131,11 @@ app.put("/teacher/update", (req, res) => {
 }); */
 
 // Catch-all route handler for any request that doesn't match the above routes
-/* app.use((req, res) => {
+app.use((req, res) => {
   res.status(404).send("page not found !!!");
-}); */
+});
+
+// A method in Express used to add middleware functions.In this case, it is used without a specific path, meaning it will be executed for all incoming requests if no prior route matches.
 
 app.listen(port, () => {
   console.log(`http://localhost:${port}`);

@@ -40,7 +40,7 @@ Steps:-
         res.send("Hello World");
     })
 * Export router 
-    module.exports = route
+    module.exports = router
 * Create/Open app.js
 * Import Router Module
     const student = require("./student.js")
