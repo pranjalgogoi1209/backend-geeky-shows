@@ -38,13 +38,21 @@ Compile directory:
 * Create a file called .babelrc at the root directory of project
 { "presets": ["@babel/preset-env"] }   //"@babel/env"
 
+
+
+// only do npm start => compile index.js file, so that it supports all browsers including older versions and put it in a folder named prd as index.js, then start the compile file which is inside the prd folder.
+// It is best for production purpose, because in development if we change anything in normal index.js file it will not reflect in the browser as we are running the compiled index.js file.
+
 * Open package.json file
 "scripts": {
-    "build": "babel index.js --out-file prd",
+    "build": "babel index.js --out-dir prd",
     "start": "npm run build && nodemon prd/index.js",
     "serve": "node prd/index.js"
     }
 
+
+
+// if index.js is inside a folder =>
 * Open package.json file 
 "scripts": {
     "build": "babel src --out-dir prd",
@@ -66,7 +74,7 @@ Install babel =>
 
 
 # This is for development =>
-
+// if you change anything in index.js then compile one will change automatically
 "scripts": {
     "start": "babel index.js -w --out-dir prd",
     "dev-serve": "nodemon prd/index.js",

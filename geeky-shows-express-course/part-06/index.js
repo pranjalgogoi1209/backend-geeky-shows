@@ -3,17 +3,18 @@ import express from "express";
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Routes
+// Routes home page
 app.get("/", (req, res) => {
-  res.send("GET REQUEST");
+  res.send("HOEM PAGE GET METHOD");
 });
 
-// String path
+// String path about page
 app.get("/about", (req, res) => {
   res.send("ABOUT PAGE");
 });
 
 // String pattern path
+// This route path will match acd and abcd
 app.get("/ab?cd", (req, res) => {
   res.send("This route path will match acd and abcd");
 });
@@ -23,9 +24,13 @@ app.get("/ab?cd", (req, res) => {
   res.send("This is a path which contains a");
 }); */
 
-/* app.all("*", (req, res) => {
-  res.send("ALL REQUEST");
-}); */
+app.all("/api/*", (req, res) => {
+  res.send("PAGE NOT FOUND in API");
+});
+
+app.all("*", (req, res) => {
+  res.send("PAGE NOT FOUND");
+});
 
 // one callback
 app.get("/cbexample1", (req, res) => {

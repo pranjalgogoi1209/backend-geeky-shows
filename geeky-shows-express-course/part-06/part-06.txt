@@ -1,6 +1,6 @@
 # ROUTING =>
     * Routing refers to determining how an application responds to a client request to a particular endpoint, which is a URL (or path) and a specific HTTP request method (GET, POST, and so on).
-    * Each route can have one or more callback functionos, which are executed when the route is matched.
+    * Each route can have one or more callback functions, which are executed when the route is matched.
     syntax:- app.method(path, callback)
 
     app.method(path, [callback1, callback2, ...])
@@ -57,6 +57,8 @@ app.all(path, [callback1, callback2, ...], callback) =>
 
     // requireAuthentication is a callback
 
+    // if we set it at first, then first of all this will execute, if we set it at last, then if nothing execute then only this will execute.
+    
     app.all("*", requireAuthentication, loadUser)
 
     app.all("/api/*", requireAuthentication)
@@ -69,7 +71,7 @@ The characters ?, +, *, and () are subsets of their regular expression counterpa
 
 The hyphen (-) and the dot (.) are interpreted literally by string-baset paths.
 
-If you need to use the dollar character ($) in a path string, enclose it escaped within ([ and ])
+If you need to use the dollar character ($) in a path string, enclose it escaped within ([\ and ])
 
 eg: -
 
