@@ -14,7 +14,7 @@ Eg:-
 //www.example.com/product/mobile/23
 
 /product/order/:year/and/:month
-//www.example.com/train/ranchi-dhanbad
+//www.example.com/2021/and/oct
 
 /train/:from-:to
 //www.example.com/train/ranchi-dhanbad
