@@ -58,3 +58,8 @@ req.query = {"category": "mobile"}
 /product
 //www.example.com/product?category=mobile&id=13
 req.query = {"category": "mobile", "id": 13}
+
+
+
+// express route testing
+forbeslindesay.gihub.io/express-route-tester
