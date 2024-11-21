@@ -1,0 +1,14 @@
+# create an api => 
+    send response of 10 static images as a json data from my static folder
+
+    [
+
+        {
+            id : ,
+            url : path,
+        },
+        {
+            id : ,
+            url : path,
+        },
+    ]

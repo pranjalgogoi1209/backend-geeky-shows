@@ -28,9 +28,9 @@ const options = {
 app.use("/static", express.static(path.join(process.cwd(), "public"), options));
 
 // for specific virtual path
-/* app.use("/css", express.static(path.join(process.cwd(), "public")));
-app.use("/image", express.static(path.join(process.cwd(), "public")));
-app.use("/js", express.static(path.join(process.cwd(), "public"))); */
+/* app.use("/css", express.static(path.join(process.cwd(), "public/css")));
+app.use("/images", express.static(path.join(process.cwd(), "public/images")));
+app.use("/js", express.static(path.join(process.cwd(), "public/js"))); */
 
 // load routes
 app.use(web);
