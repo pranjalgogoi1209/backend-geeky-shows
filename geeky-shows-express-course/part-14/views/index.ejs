@@ -12,7 +12,7 @@
       <%= name %>
 
       <!-- creating variable -->
-      <% var i = 10; %>
+      <% var i = 15; %>
 
       <!-- displaying created variable data -->
       <%= i %>
@@ -28,9 +28,11 @@
     <!-- <% if (i === 10) { console.log('i is 10'); console.log("testing only"); %> i
     is 10 => <%= name %> <% } %> -->
 
-    <% if(name){ %>
+    <% if(name === "pranjal"){ %>
+
+    <!-- srcipt runs in client side -->
     <script>
-      console.log("working");
+      console.log("if working");
     </script>
     This is html content.
     <br />
@@ -40,15 +42,15 @@
     <br /><br />
     ------------------ if-else ------------------
     <br />
-    <% if(name === "Krishna Yadav"){ %>
+    <% if(name === "pranjal"){ %>
     <script>
-      console.log("working");
+      console.log("if-else working (if part)");
     </script>
     This is if block.
     <br />
     I am <%= name %> from if block <% } else{ %>
     <script>
-      console.log("not working");
+      console.log("if-else working (else part)");
     </script>
     This is else block.
     <br />
@@ -58,15 +60,15 @@
     <br /><br />
     ------------------ else if -------------------
     <br />
-    <% if (name === "Krishna Yadav") { %>
+    <% if (name === "krishna") { %>
     <script>
-      console.log("this is if block");
+      console.log("this is else if (if part)");
     </script>
     This is if block.
     <br />
-    I am <%= name %> from if block <% } else if (name === "Pranjal Gogoi") { %>
+    I am <%= name %> from if block <% } else if (name === "pranjal") { %>
     <script>
-      console.log("this is else if block");
+      console.log("this is else if (else if part)");
     </script>
     This is else if block.
     <br />
@@ -84,7 +86,7 @@
     <br />
     <% for(var j=0; j<=4; j++){ %>
     <script>
-      // console.log("loop is working", <%= j %>);
+      console.log("loop is working");
     </script>
     <%= j %> => <%= marks[j] %> <% } %>
 
@@ -104,8 +106,8 @@
     <br /><br />
     ------------------ while loop -------------------
     <br />
-    <% let loopNumber = 0; while (loopNumber <= 4){ %> loopNumber is <%=
-    loopNumber %> mark is <%= marks[loopNumber]%> <% loopNumber++ %> <% } %>
+    <% let loopNumber = 0; while (loopNumber <= 4){ %> loopNumber is
+    <%=loopNumber %> mark is <%= marks[loopNumber]%> <% loopNumber++ %> <% } %>
 
     <!-- foreach loop -->
     <br /><br />
@@ -117,8 +119,8 @@
     <br /><br />
     ------------------ function calling -------------------
     <br />
-    <% var result = sum(marks[0], marks[1]) %> The sum of <%= marks[0] %> and
-    <%= marks[1] %> is <%= result %> <% %>
+    <% var result = sumFunc(marks[0], marks[1]) %> The sum of <%= marks[0] %>
+    and <%= marks[1] %> is <%= result %> <% %>
     <br />
     <% var current = new Date(); %> Current date is <%= current %> <% %>
   </body>

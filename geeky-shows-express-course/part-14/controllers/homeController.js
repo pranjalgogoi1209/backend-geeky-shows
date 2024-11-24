@@ -1,8 +1,8 @@
 const homeController = (req, res) => {
   const data = {
-    name: "Pranjal Gogoi",
+    name: "pranjal",
     marks: [40, 60, 80, 100, 120],
-    sum: (num1, num2) => {
+    sumFunc: (num1, num2) => {
       return num1 + num2;
     },
   };

@@ -1,13 +1,11 @@
 import express from "express";
-import homePage from "./routes/web.js";
-import aboutPage from "./routes/web.js";
+import web from "./routes/web.js";
 
 const app = express();
 const port = process.env.PORT || 3000;
 
 // load routes
-app.use(homePage);
-app.use(aboutPage);
+app.use(web);
 
 // set template engine
 app.set("view engine", "ejs");
