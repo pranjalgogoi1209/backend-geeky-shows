@@ -31,3 +31,7 @@ const options = {
     authSourse: "schooldb",
 }
 mongoose.connect("mongodb://localhost:27017/schooldb", options)
+
+
+* If I have special character in password, then I have to use percentage encoding. for different symbol we have different percentage encoding. 
+? => %3F
