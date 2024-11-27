@@ -1,0 +1,7 @@
+Create an post method api and create a collection with data of document as => 
+{
+    "name": "AKSHAY Kumar",
+    "age": 6,
+    "previousClass": "ONE",
+    "previousClassScore": 420
+}
