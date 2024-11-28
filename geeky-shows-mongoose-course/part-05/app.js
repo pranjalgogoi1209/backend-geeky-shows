@@ -1,5 +1,19 @@
 import express from "express";
-import { getAllDoc, getAllDocSpecificField } from "./models/TeacherModel.js";
+import {
+  getAllDoc,
+  getAllDocSpecificField,
+  getSingleDoc,
+  getSingleDocSpecificField,
+  getDocByField,
+  getDocBySpecificField,
+  getLimitedDoc,
+  getSkipDoc,
+  getDocCount,
+  getSortDoc,
+  mixDoc,
+  compDoc,
+  logDoc,
+} from "./models/TeacherModel.js";
 
 import connectDb from "./db/connectDb.js";
 
@@ -11,8 +25,19 @@ const DATABASE_URL =
 
 connectDb(DATABASE_URL);
 
-getAllDoc();
-getAllDocSpecificField();
+// getAllDoc();
+// getAllDocSpecificField();
+// getSingleDoc();
+// getSingleDocSpecificField();
+// getDocByField();
+// getDocBySpecificField();
+// getLimitedDoc();
+// getSkipDoc();
+// getDocCount();
+// getSortDoc();
+// mixDoc();
+// compDoc();
+logDoc();
 
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
