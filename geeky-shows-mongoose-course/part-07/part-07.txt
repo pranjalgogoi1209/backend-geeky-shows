@@ -1,0 +1,16 @@
+# DELETE DOCUMENT => 
+* findByIdAndDelete()  => It finds a matching document then deletes it.
+syntax => findByIdAndDelete(id, options, callback)
+id can be object, number or string
+eg:- findByIdAndDelete("hdfjshg35i43u5")
+eg:- findByIdAndDelete({_id: "djhfgj5r98375"})
+
+* deleteOne() => It is used to delte single document. MOngoDB will delete only the first document that matches conditions.
+syntax => deleteOne(conditions, options, callback)
+eg:- deleteOne({_id: "jkdjsfk53k5"})
+eg:- deleteOne({_id: "hdjfh3759837", age: 27})
+
+* deleteMany() => It is used to delete multiple document. MongoDB will delete all documents that match conditions.
+syntax => deleteMany(conditions, options, callback)
+eg: deleteMany({age: 27})
+eg: deleteMany({name: "Sonam", age: 27})
