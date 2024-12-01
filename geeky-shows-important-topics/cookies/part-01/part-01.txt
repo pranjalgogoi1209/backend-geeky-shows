@@ -1,0 +1,12 @@
+# Cookies => A cookie is a small piece of text data set by Web server that resided on the client's machine. Once it's been set, the client automatically returns the cookie to the web server with each request that it makes. This allows the server to place value it wishes to "remember" in the cookie, and have access to them when creating a response.
+
+# How cookie works
+
+# 3rd party cookies => We store unique id in client's machine and store cookies in 3rd party cookies, it helps to not store too much data in client's machine.
+
+# How dangerous cookies are 
+
+# Type of Cookies
+    * Session cookies => Cookies that are set without the expires field are called session cookies. It is destroyed when the uesr quits the browser.
+
+    * Persistent cookies => The browser keeps it up until their expiration date is reached.

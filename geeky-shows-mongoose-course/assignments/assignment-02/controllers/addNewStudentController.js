@@ -13,12 +13,10 @@ const addNewStudentController = async (req, res) => {
 
     const result = await newStudentDoc.save();
     console.log(result);
-    res
-      .status(200)
-      .json({
-        message: "New student added successfully",
-        statusMessage: "success",
-      });
+    res.status(200).json({
+      message: "New student added successfully",
+      statusMessage: "success",
+    });
   } catch (err) {
     console.log(err);
     res
