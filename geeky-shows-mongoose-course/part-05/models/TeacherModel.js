@@ -82,8 +82,8 @@ const getAllDocSpecificField = async () => {
 
 // retrieve single document
 const getSingleDoc = async () => {
-  const result = await teacherModel.findById("67461d546abacf174741959a");
-  // console.log(result);
+  const result = await teacherModel.findById("67461d546abacf174741959b");
+  console.log(result);
   console.log(result.age);
   console.log(result._id.getTimestamp());
 };

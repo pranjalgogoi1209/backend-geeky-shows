@@ -27,7 +27,7 @@ connectDb(DATABASE_URL);
 
 // getAllDoc();
 // getAllDocSpecificField();
-// getSingleDoc();
+getSingleDoc();
 // getSingleDocSpecificField();
 // getDocByField();
 // getDocBySpecificField();
@@ -37,7 +37,7 @@ connectDb(DATABASE_URL);
 // getSortDoc();
 // mixDoc();
 // compDoc();
-logDoc();
+// logDoc();
 
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
