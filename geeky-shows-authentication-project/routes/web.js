@@ -12,4 +12,7 @@ router.get("/registration", UserController.registration);
 // create user doc
 router.post("/create-user", UserController.createUserDoc);
 
+// verify login
+router.post("/verify-login", UserController.verifyLogin);
+
 export default router;
