@@ -1,0 +1,17 @@
+# WHAT NEXT
+
+    * Update Yourself => jwt etc..
+    * Develop Project and API.
+    * Framework/Lib => Angular, React JS, Vue JS etc.
+    * Become MEAN or MERN or MEVN developer.
+    * Job or Freelancing.
+    
+# MERN => Mongodb, Express, React, Node
+
+# React Router
+
+# Redux
+
+# Material UI
+
+# OTP VERIFICATION
